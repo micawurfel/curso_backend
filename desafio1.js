@@ -28,8 +28,7 @@ class ProductManger{
   getProductById(id){
     let findId = this.products.find(product => product.id===id)
     if(!findId){
-      console.log(`El producto con el id ${id} no existe`)
-      return
+      return `El producto con el id ${id} no existe`
     }
 
     return findId
@@ -47,7 +46,7 @@ product.addProduct('producto prueba', 'este producto es una prueba', 200, 'sin i
 product.addProduct('test2', '....', 63, 'sin imagen', 'dsw862', 123)
 console.log(product.getProducts())
 
-console.log(product.getProductById(1))
+console.log(product.getProductById(4))
 
 
 
